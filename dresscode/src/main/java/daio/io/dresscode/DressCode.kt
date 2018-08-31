@@ -53,6 +53,7 @@ private fun checkDressCode(value: String) {
 fun Application.declareDressCode(
     vararg themes: Int
 ) {
+    if (themes.isEmpty()) throw RuntimeException("No theme declared")
 
     availableDressCodes = ArrayMap<String, Int>(themes.size).apply {
         themes.forEach {

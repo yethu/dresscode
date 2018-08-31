@@ -17,6 +17,5 @@ class MainActivity : AppCompatActivity() {
             Intent(this, Main2Activity::class.java)
                     .apply(::startActivity)
         }
-
     }
 }

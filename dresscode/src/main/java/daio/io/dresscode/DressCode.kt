@@ -39,7 +39,6 @@ private fun checkDressCode(value: String) {
         throw RuntimeException("Dress Code $value does not exist")
 }
 
-
 /**
  * To declareDressCode your app with DressCodes you need to call [declareDressCode] from your Application class.
  * Give your dressCodes a name and the themeId defined in your styles.xml
@@ -63,8 +62,7 @@ fun Application.declareDressCode(
     }
 
     themePreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-    currentDressCode = themePreferences.getString(PREFS_KEY, null) ?:
-            resources.getResourceEntryName(themes.first())
+    currentDressCode = themePreferences.getString(PREFS_KEY, null) ?: resources.getResourceEntryName(themes.first())
 
     registerActivityLifecycleCallbacks(LifecycleListener())
 }
@@ -81,4 +79,3 @@ fun Activity.matchDressCode() {
     setTheme(theme)
     activities[this::class] = currentDressCode
 }
-

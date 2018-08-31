@@ -7,7 +7,6 @@ import android.os.Bundle
 internal class LifecycleListener : Application.ActivityLifecycleCallbacks {
 
     override fun onActivityPaused(activity: Activity?) {
-
     }
 
     override fun onActivityResumed(activity: Activity) {
@@ -29,5 +28,4 @@ internal class LifecycleListener : Application.ActivityLifecycleCallbacks {
 
     override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {
     }
-
 }

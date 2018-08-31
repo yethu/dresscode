@@ -17,6 +17,4 @@ class Main2Activity : AppCompatActivity() {
             dressCodeStyleId = if (dressCodeStyleId == R.style.ThemeOne) R.style.ThemeTwo else R.style.ThemeOne
         }
     }
-
-
 }
